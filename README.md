@@ -1,8 +1,7 @@
 
-### Markdown for First Part of the Script:
+### Network Automation ZTP Script
 
 ```markdown
-# Network Automation ZTP Script
 
 This script automates the **Zero-Touch Provisioning (ZTP)** of network devices (switches and routers), allowing them to fetch, download, and apply their configurations automatically via **TFTP** and a remote **API**. It ensures that new network devices can join the network with minimal intervention from network administrators.
 
