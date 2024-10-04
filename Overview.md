@@ -51,14 +51,3 @@ By applying this configuration, the device becomes operational within the networ
 
 #### 7. **Device is Fully Operational**:
 With the configuration applied, the device is now **fully functional** and ready to perform its designated role within the network. There was no need for manual intervention during the process. The device automatically received its configuration, applied it, and became part of the network infrastructure.
-
----
-
-### Conclusion:
-This ZTP process streamlines the deployment of new network devices. By automating the retrieval and application of configurations via **DHCP**, **TFTP**, and a remote **API**, administrators can quickly bring new devices online with minimal effort. The script ensures secure communication with the API, encrypted environment variables, and Cisco CLI configurations that are easy to apply to the device.
-
-This process is ideal for large-scale network deployments, reducing setup time, minimizing configuration errors, and allowing devices to self-configure upon connection to the network.
-
----
-
-This overview should give you a clear, written explanation of how the script handles the entire ZTP process. Let me know if you’d like to dive deeper into any specific parts or if you'd like further refinement!
