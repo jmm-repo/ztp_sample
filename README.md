@@ -1,25 +1,27 @@
 
 ### Network Automation ZTP Script
 
-```markdown
 
 This script automates the **Zero-Touch Provisioning (ZTP)** of network devices (switches and routers), allowing them to fetch, download, and apply their configurations automatically via **TFTP** and a remote **API**. It ensures that new network devices can join the network with minimal intervention from network administrators.
 
 ## Part 1: Environment Setup and Configuration Fetching
 
-### 1. Secure Decryption of Environment Variables
+1. Secure Decryption of Environment Variables
 
 Before the network devices can fetch their configuration data from the API, the script securely decrypts environment variables such as **API tokens** and the **TFTP server IP**. The variables are stored in an encrypted format using **Fernet encryption**, and the script decrypts these variables at runtime.
 
-#### Key Files:
+```
+
+Key Files:
 - `secret.key`: Stores the encryption key for decrypting the environment variables.
 - `encrypted_env.bin`: Contains the encrypted environment variables such as the API token and TFTP server IP.
 
-#### Decrypting Environment Variables:
+Decrypting Environment Variables:
 
 The script starts by loading the encryption key from `secret.key` and decrypting the contents of `encrypted_env.bin`. This step ensures that the sensitive environment variables are securely stored and only decrypted when needed.
 
-```python
+```
+
 def load_key():
     """
     Load the encryption key from a file.
@@ -70,7 +72,7 @@ def decrypt_env():
         raise
 ```
 
-### 2. Fetching Configuration Data from the API
+2. Fetching Configuration Data from the API
 
 Once the environment variables are successfully decrypted and available, the script makes an HTTP GET request to the API to fetch the network configuration data. The API token, which is one of the decrypted environment variables, is used for authentication.
 
