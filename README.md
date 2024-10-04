@@ -10,9 +10,10 @@ This script automates the **Zero-Touch Provisioning (ZTP)** of network devices (
 
 Before the network devices can fetch their configuration data from the API, the script securely decrypts environment variables such as **API tokens** and the **TFTP server IP**. The variables are stored in an encrypted format using **Fernet encryption**, and the script decrypts these variables at runtime.
 
-```
 
 Key Files:
+```
+
 - `secret.key`: Stores the encryption key for decrypting the environment variables.
 - `encrypted_env.bin`: Contains the encrypted environment variables such as the API token and TFTP server IP.
 
