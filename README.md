@@ -12,7 +12,6 @@ Before the network devices can fetch their configuration data from the API, the 
 
 
 Key Files:
-```
 
 - `secret.key`: Stores the encryption key for decrypting the environment variables.
 - `encrypted_env.bin`: Contains the encrypted environment variables such as the API token and TFTP server IP.
